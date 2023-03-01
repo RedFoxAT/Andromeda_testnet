@@ -1,15 +1,3 @@
-{\rtf1\ansi\ansicpg1251\cocoartf2706
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fnil\fcharset0 AndaleMono;\f2\fnil\fcharset0 .AppleSystemUIFontMonospaced-Regular;
-}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red217\green218\blue223;\red32\green34\blue37;
-\red150\green204\blue255;\red18\green21\blue26;}
-{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c87843\c88235\c89804;\cssrgb\c16863\c17647\c19216;
-\cssrgb\c64706\c83922\c100000;\cssrgb\c8627\c10588\c13333;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh18000\viewkind0
-\deftab720
-\pard\pardeftab720\partightenfactor0
-
-\f0\fs26 \cf0 \expnd0\expndtw0\kerning0
 #!/bin/bash\
 exists()\
 \{\
