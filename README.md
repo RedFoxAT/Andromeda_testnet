@@ -1,5 +1,9 @@
 <img src="https://github.com/RedFoxAT/Andromeda/blob/main/andromeda_logo.png" width="1150" alt="" />
 
+### MINIMUM REQUIREMETS
+
+**OS UBUNTU 20.04 CPU 4 RAM 16GB HDD 200GB**
+
 ### LINKS
 ```WEBSITE``` - https://andromedaprotocol.io/ <br>
 ```TWITTER``` - https://twitter.com/AndromedaProt/ <br>
@@ -38,4 +42,13 @@ s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
 s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" $HOME/.andromedad/config/config.toml
 andromedad tendermint unsafe-reset-all --home $HOME/.andromedad
 systemctl restart andromedad && journalctl -u andromedad -f -o cat
+```
+### CHECK NODE SYNK (if results false – node is synchronized)
+```
+curl -s localhost:26657/status | jq .result.sync_info.catching_up
+```
+
+### CHEK NODE LOGS
+```
+journalctl -u andromedad -f -o cat
 ```
