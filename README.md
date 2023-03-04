@@ -1,7 +1,7 @@
 <img src="https://github.com/RedFoxAT/Andromeda/blob/main/andromeda_logo.png" width="1150" alt="" />
 
 ### MINIMUM REQUIREMENTS
-```OS``` UBUNTU 20.04<br>
+ ```OS``` UBUNTU 20.04<br>
  ```CPU``` 4core<br>
  ```RAM``` 16GB<br>
  ```HDD``` 200GB<br>
