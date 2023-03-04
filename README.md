@@ -45,7 +45,7 @@ s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" $HOME/.andromedad/config/config.
 andromedad tendermint unsafe-reset-all --home $HOME/.andromedad
 systemctl restart andromedad && journalctl -u andromedad -f -o cat
 ```
-### CHECK NODE SYNK (if results false – node is synchronized)
+### CHECK NODE SYNK (if results _FALSE_ – node is synchronized)
 ```
 curl -s localhost:26657/status | jq .result.sync_info.catching_up
 ```
