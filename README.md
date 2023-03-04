@@ -58,3 +58,12 @@ journalctl -u andromedad -f -o cat
 ```
 andromedad q bank balances <wallet name>
 ```
+### _CHANGE NODE PROPERTIES_
+andromedad tx staking edit-validator \
+—new-moniker="Newmoniker" \
+--identity="new" \
+--website="new" \
+--chain-id galileo-3 \
+--gas 350000 \
+--from <our wallet name> \
+--details="new" -y
