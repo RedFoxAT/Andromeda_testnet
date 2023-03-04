@@ -80,6 +80,23 @@ s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" $HOME/.andromedad/config/config.
 andromedad tendermint unsafe-reset-all --home $HOME/.andromedad
 systemctl restart andromedad && journalctl -u andromedad -f -o cat
 ```
+### _CREATE VALIDATOR_
+```
+andromedad tx staking create-validator \
+--commission-rate 0.1 \
+--commission-max-rate 1 \
+--commission-max-change-rate 1 \
+--min-self-delegation "1" \
+--amount 1000000uandr \
+--pubkey $(andromedad tendermint show-validator) \
+--from <wallet> \
+--moniker="NEW NAME" \
+--chain-id galileo-3 \
+--gas 350000 \
+--identity="" \
+--website="" \
+--details="" -y
+```
 ### _CHECK NODE SYNK_ (if results _FALSE_ – node is synchronized)
 ```
 curl -s localhost:26657/status | jq .result.sync_info.catching_up
