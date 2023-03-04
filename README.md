@@ -1,4 +1,5 @@
 # Andromeda testnet
+<img src="https://github.com/RedFoxAT/Andromeda/blob/main/andromeda_logo.png" width="1050" alt="" />
 <br>
 Minimum hardware requirements:
 CPU - 4, RAM - 8Gb, HDD 200Gb<br>
