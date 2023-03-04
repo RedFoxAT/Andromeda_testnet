@@ -5,19 +5,5 @@
 <h3><a href=https://t.me/andromedaprotocol> TELEGRAM </a><br>
 <h3><a href=https://twitter.com/AndromedaProt/> TWITTER </a><br>
 <h3><a href=https://testnet-ping.wildsage.io/andromeda/staking> EXPLORER </a></h2><br>
- Minimum hardware requirements:
-CPU - 4, RAM - 8Gb, HDD 200Gb<br> 
-<h3> Instalation guide </h3>
-<br>
-Server preparation: <br>
-sudo apt update && sudo apt upgrade -y<br>
-sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bsdmainutils git make ncdu gcc git jq chrony liblz4-tool -y<br><br>
-Installing GO 1.19:<br>
-ver="1.19" && \
-wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" && \
-sudo rm -rf /usr/local/go && \
-sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz" && \
-rm "go$ver.linux-amd64.tar.gz" && \
-echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile && \
-source $HOME/.bash_profile && \
-go version
+Minimum hardware requirements: CPU - 4, RAM - 8Gb, HDD 200Gb<br> 
+
