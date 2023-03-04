@@ -1,10 +1,10 @@
-# Andromeda testnet
+# Andromeda testnet<br>
 <img src="https://github.com/RedFoxAT/Andromeda/blob/main/andromeda_logo.png" width="1050" alt="" />
-<br>
-Minimum hardware requirements:
-CPU - 4, RAM - 8Gb, HDD 200Gb<br>
 <h2><a href=https://andromedaprotocol.io> WEB SITE </a><br>
-<h2><a href=https://testnet-ping.wildsage.io/andromeda/staking> EXPLORER </a></h2>
+<h2><a href=[https://andromedaprotocol.io](https://discord.gg/GBd6buKYyZ)> DISCORD </a><br>  
+<h2><a href=https://testnet-ping.wildsage.io/andromeda/staking> EXPLORER </a></h2><br>
+ Minimum hardware requirements:
+CPU - 4, RAM - 8Gb, HDD 200Gb<br> 
 <h3> Instalation guide </h3>
 <br>
 Server preparation: <br>
