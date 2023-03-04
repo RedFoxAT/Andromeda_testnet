@@ -13,12 +13,12 @@
 ```GITHUB``` - https://github.com/andromedaprotocol/ <br>
 ```TELEGRAM``` - https://t.me/andromedaprotocol/ <br>
 ## MANUAL INSTALL
-### PREPARING SERVER
+### _PREPARING SERVER_
 ```
 sudo apt update && sudo apt upgrade -y
 sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bsdmainutils git make ncdu gcc git jq chrony liblz4-tool -y
 ```
-### INSTALL GO
+### _INSTALL GO_
 ```
 ver="1.19" && \
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" && \
@@ -29,13 +29,24 @@ echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile &
 source $HOME/.bash_profile && \
 go version
 ```
-### LAST BUILD
+### _LAST BUILD_
 ```
 cd $HOME
 git clone https://github.com/andromedaprotocol/andromedad.git
 cd andromedad
 git checkout galileo-3-v1.1.0-beta1 
 make install
+```
+```python
+andromedad init <node name> --chain-id galileo-3
+andromedad config chain-id galileo-3
+```    
+
+### _CREATE/RECOVERY WALLET_
+```
+andromedad keys add <walletname>
+   OR
+andromedad keys add <walletname> --recover
 ```
 ### _DOWNLOAD GENESIS_
 ```
