@@ -97,6 +97,7 @@ andromedad tx staking create-validator \
 --website="" \
 --details="" -y
 ```
+## 
 ### _CHECK NODE SYNK_ (if results _FALSE_ – node is synchronized)
 ```
 curl -s localhost:26657/status | jq .result.sync_info.catching_up
