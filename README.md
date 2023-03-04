@@ -56,5 +56,5 @@ journalctl -u andromedad -f -o cat
 ```
 ### _CHECK BALANCE_
 ```
-andromedad query bank balances <wallet name>
+andromedad q bank balances <wallet name>
 ```
