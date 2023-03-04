@@ -60,8 +60,8 @@ andromedad q bank balances <wallet name>
 ```
 ### _CHANGE NODE PROPERTIES_
 ```
-andromedad tx staking edit-validator \
-—new-moniker="Newmoniker" \
+andromedad tx staking edit-validator <br>
+—-new-moniker="Newmoniker" \
 --identity="new" \
 --website="new" \
 --chain-id galileo-3 \
