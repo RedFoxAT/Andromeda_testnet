@@ -50,7 +50,11 @@ systemctl restart andromedad && journalctl -u andromedad -f -o cat
 curl -s localhost:26657/status | jq .result.sync_info.catching_up
 ```
 
-### _CHEK NODE LOGS_
+### _CHECK NODE LOGS_
 ```
 journalctl -u andromedad -f -o cat
+```
+### _CHECK BALANCE_
+```
+andromedad query bank balances <wallet name>
 ```
