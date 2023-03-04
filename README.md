@@ -121,6 +121,7 @@ andromedad tx staking edit-validator
 --gas 350000 
 --from <our wallet name> 
 --details="new" -y
+```
 ### _DELETE NODE_
 ```
 sudo systemctl stop andromedad && \
