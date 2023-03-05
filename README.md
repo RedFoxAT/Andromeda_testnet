@@ -126,6 +126,10 @@ andromedad tx staking edit-validator
 --from <our wallet name> 
 --details="new" -y
 ```
+### _NODA IN JAIL / НОДА "В ТЮРЬМЕ"_
+```
+andromedad tx slashing unjail --from wallet --node https://rpc-andromeda-testnet.cereslabs.io:443/ --chain-id galileo-3
+```
 ### _USED PORTS /ПОРТЫ_
 ```
 26656, 26657, 9091, 9090, 6060, 1317
