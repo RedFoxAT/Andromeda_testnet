@@ -115,6 +115,12 @@ journalctl -u andromedad -f -o cat
 ```
 andromedad q bank balances <wallet name>
 ```
+### _BACKUP VALIDATOR NODE FILE / РЕЗЕРВНОЕ КОПИРОВАНИЕ КЛЮЧЕЙ НОДЫ_
+```
+cp .andromedad/config/node_key.json /home/node
+cp .andromedad/config/priv_validator_key.json /home/node
+.andromedad/data/priv_validator_state.json /home/node
+```
 ### _CHANGE NODE PROPERTIES / ИЗМЕНЕНИЕ СВОЙСТВ НОДЫ_
 ```
 andromedad tx staking edit-validator 
