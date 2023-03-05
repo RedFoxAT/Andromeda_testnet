@@ -126,6 +126,10 @@ andromedad tx staking edit-validator
 --from <our wallet name> 
 --details="new" -y
 ```
+### _USED PORTS /ПОРТЫ_
+```
+26656, 26657, 9091, 9090, 6060, 1317
+```
 ### _DELETE NODE / УДАЛЕНИЕ НОДЫ_
 ```
 sudo systemctl stop andromedad && \
