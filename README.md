@@ -1,24 +1,24 @@
 <img src="https://github.com/RedFoxAT/Andromeda/blob/main/andromeda_logo.png" width="1150" alt="" />
 
-### _MINIMUM REQUIREMENTS_
+### _MINIMUM REQUIREMENTS / МИНИМАЛЬНЫЕ ТРЕБОВАНИЯ_
  ```OS``` _UBUNTU 20.04<br>
  ```CPU``` 4core<br>
  ```RAM``` 16GB<br>
  ```HDD``` 200GB_<br>
 
-### _LINKS_
+### _LINKS / ССЫЛКИ_
 ```WEBSITE``` - https://andromedaprotocol.io/ <br>
 ```TWITTER``` - https://twitter.com/AndromedaProt/ <br>
 ```DISCORD``` - https://discord.gg/GBd6buKYyZ <br>
 ```GITHUB``` - https://github.com/andromedaprotocol/ <br>
 ```TELEGRAM``` - https://t.me/andromedaprotocol/ <br>
-## MANUAL INSTALL
-### _PREPARING SERVER_
+## MANUAL INSTALL / РУЧНАЯ УСТАНОВКА
+### _PREPARING SERVER / ОБНОВЛЕНИЕ ПРОГРАММ_
 ```
 sudo apt update && sudo apt upgrade -y
 sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bsdmainutils git make ncdu gcc git jq chrony liblz4-tool -y
 ```
-### _INSTALL GO_
+### _INSTALL GO / УСТАНОВКА GO_
 ```
 ver="1.19" && \
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" && \
@@ -29,7 +29,7 @@ echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile &
 source $HOME/.bash_profile && \
 go version
 ```
-### _LAST BUILD_
+### _LAST BUILD / УСТАНОВКА_
 ```
 cd $HOME
 git clone https://github.com/andromedaprotocol/andromedad.git
@@ -42,26 +42,26 @@ andromedad init <node name> --chain-id galileo-3
 andromedad config chain-id galileo-3
 ```    
 
-### _CREATE/RECOVERY WALLET_
+### _CREATE/RECOVERY WALLET / СОЗДАНИЕ (ВОССТАНОВЛЕНИЕ КОШЕЛЬКА)_
 ```
 andromedad keys add <walletname>
    OR
 andromedad keys add <walletname> --recover
 ```
-### _DOWNLOAD GENESIS_
+### _DOWNLOAD GENESIS / ЗАГРУЗКА GENESIS_
 ```
 wget -qO $HOME/.andromeda/config/genesis.json wget "https://snapshot.yeksin.net/andromeda/genesis.json"
 ```
-### _DOWNLOAD ADDRBOOK_
+### _DOWNLOAD ADDRBOOK / ЗАГРУЗКА АДРЕСНОЙ КНИГИ_
 ```
 wget -qO $HOME/.andromedad/config/addrbook.json wget "https://snapshot.yeksin.net/andromeda/addrbook.json"
 ```
-### _ADD PEERS_
+### _ADD PEERS / ДОБАВЛЕНИЕ ПИРОВ_
 ```
 PEERS="06d4ab2369406136c00a839efc30ea5df9acaf11@10.128.0.44:26656,43d667323445c8f4d450d5d5352f499fa04839a8@192.168.0.237:26656,29a9c5bfb54343d25c89d7119fade8b18201c503@192.168.101.79:26656,6006190d5a3a9686bbcce26abc79c7f3f868f43a@37.252.184.230:26656"
 sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.andromedad/config/config.toml
 ```
-### _SYNK NODE_
+### _SYNK NODE / СИНХРОНИЗАЦИЯ НОДЫ_
 ```
 SNAP_RPC=http://andromedad.rpc.t.stavr.tech:4137
 peers="247f3c2bed475978af238d97be68226c1f084180@andromedad.peer.stavr.tech:4376"
@@ -80,7 +80,7 @@ s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" $HOME/.andromedad/config/config.
 andromedad tendermint unsafe-reset-all --home $HOME/.andromedad
 systemctl restart andromedad && journalctl -u andromedad -f -o cat
 ```
-### _CREATE VALIDATOR_
+### _CREATE VALIDATOR / СОЗДАНИЕ ВАЛИДАТОРА_
 ```
 andromedad tx staking create-validator \
 --commission-rate 0.1 \
@@ -98,20 +98,20 @@ andromedad tx staking create-validator \
 --details="" -y
 ```
 ## 
-### _CHECK NODE SYNK_ (if results _FALSE_ – node is synchronized)
+### _CHECK NODE SYNK / ПРОВЕРКА СИНХРОНИЗАЦИИ_ (if results _FALSE_ – node is synchronized)(если результат _FALSE_ - нода синхронизирована)
 ```
 curl -s localhost:26657/status | jq .result.sync_info.catching_up
 ```
 
-### _CHECK NODE LOGS_
+### _CHECK NODE LOGS / ПРОВЕРКА ЛОГОВ_
 ```
 journalctl -u andromedad -f -o cat
 ```
-### _CHECK BALANCE_
+### _CHECK BALANCE / ПРОВЕРКА БАЛАНСА КОШЕЛЬКА_
 ```
 andromedad q bank balances <wallet name>
 ```
-### _CHANGE NODE PROPERTIES_
+### _CHANGE NODE PROPERTIES / ИЗМЕНЕНИЕ СВОЙСТВ НОДЫ_
 ```
 andromedad tx staking edit-validator 
 —-new-moniker="Newmoniker" 
@@ -122,7 +122,7 @@ andromedad tx staking edit-validator
 --from <our wallet name> 
 --details="new" -y
 ```
-### _DELETE NODE_
+### _DELETE NODE / УДАЛЕНИЕ НОДЫ_
 ```
 sudo systemctl stop andromedad && \
 sudo systemctl disable andromedad && \
