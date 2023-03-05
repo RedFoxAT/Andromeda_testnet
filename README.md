@@ -119,7 +119,7 @@ andromedad q bank balances <wallet name>
 ```
 cp .andromedad/config/node_key.json /home/node
 cp .andromedad/config/priv_validator_key.json /home/node
-.andromedad/data/priv_validator_state.json /home/node
+cp .andromedad/data/priv_validator_state.json /home/node
 ```
 ### _CHANGE NODE PROPERTIES / ИЗМЕНЕНИЕ СВОЙСТВ НОДЫ_
 ```
