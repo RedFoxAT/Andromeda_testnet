@@ -97,6 +97,10 @@ andromedad tx staking create-validator \
 --website="" \
 --details="" -y
 ```
+### _YUOR VALOPER ADDRESS /ВАШ АДРЕС ВАЛИДАТОРА_
+```
+andromedad keys show wallet --bech val -a
+```
 ## 
 ### _CHECK NODE SYNK / ПРОВЕРКА СИНХРОНИЗАЦИИ_ (if results _FALSE_ – node is synchronized)(если результат _FALSE_ - нода синхронизирована)
 ```
