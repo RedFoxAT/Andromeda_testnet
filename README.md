@@ -45,7 +45,6 @@ make install
 andromedad init <node name> --chain-id galileo-3
 andromedad config chain-id galileo-3
 ```    
-
 ### _CREATE/RECOVERY WALLET / СОЗДАНИЕ (ВОССТАНОВЛЕНИЕ КОШЕЛЬКА)_
 ```
 andromedad keys add <walletname>
