@@ -5,7 +5,7 @@ do
 
 # Logo
 
-curl -s https://github.com/RedFoxAT/Andromeda/blob/main/2023-03-02%2020.35.28.jpg | bash
+# curl -s https://github.com/RedFoxAT/Andromeda/blob/main/2023-03-02%2020.35.28.jpg | bash
 
 # Menu
 
@@ -15,8 +15,8 @@ options=(
 "Create wallet"
 "Check node logs"
 "Synchronization via StateSync"
-"Synchronization via SnapShot"
-"UPDATE"
+"Test menu"
+"Recovery wallet"
 "Delete Node"
 "Exit")
 select opt in "${options[@]}"
