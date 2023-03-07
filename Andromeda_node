@@ -3,10 +3,6 @@
 while true
 do
 
-# Logo
-
-# curl -s https://github.com/RedFoxAT/Andromeda/blob/main/2023-03-02%2020.35.28.jpg | bash
-
 # Menu
 
 PS3='Select an action: '
