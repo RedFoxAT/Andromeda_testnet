@@ -66,22 +66,25 @@ sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persisten
 ```
 ### _SYNK NODE / СИНХРОНИЗАЦИЯ НОДЫ_
 ```
-SNAP_RPC=http://andromedad.rpc.t.stavr.tech:4137
-peers="247f3c2bed475978af238d97be68226c1f084180@andromedad.peer.stavr.tech:4376"
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.andromedad/config/config.toml
-LATEST_HEIGHT=$(curl -s $SNAP_RPC/block | jq -r .result.block.header.height); \
-BLOCK_HEIGHT=$((LATEST_HEIGHT - 100)); \
-TRUST_HASH=$(curl -s "$SNAP_RPC/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
+sudo systemctl stop andromedad
+andromedad tendermint unsafe-reset-all --home $HOME/.andromedad --keep-addr-book 
 
-echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
+STATE_SYNC_RPC="http://161.97.148.146:60657"
 
-sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
-s|^(rpc_servers[[:space:]]+=[[:space:]]+).*$|\1\"$SNAP_RPC,$SNAP_RPC\"| ; \
-s|^(trust_height[[:space:]]+=[[:space:]]+).*$|\1$BLOCK_HEIGHT| ; \
-s|^(trust_hash[[:space:]]+=[[:space:]]+).*$|\1\"$TRUST_HASH\"| ; \
-s|^(seeds[[:space:]]+=[[:space:]]+).*$|\1\"\"|" $HOME/.andromedad/config/config.toml
-andromedad tendermint unsafe-reset-all --home $HOME/.andromedad
-systemctl restart andromedad && journalctl -u andromedad -f -o cat
+LATEST_HEIGHT=$(curl -s $STATE_SYNC_RPC/block | jq -r .result.block.header.height)
+SYNC_BLOCK_HEIGHT=$(($LATEST_HEIGHT - 2000))
+SYNC_BLOCK_HASH=$(curl -s "$STATE_SYNC_RPC/block?height=$SYNC_BLOCK_HEIGHT" | jq -r .result.block_id.hash)
+
+sed -i \
+  -e "s|^enable *=.*|enable = true|" \
+  -e "s|^rpc_servers *=.*|rpc_servers = \"$STATE_SYNC_RPC,$STATE_SYNC_RPC\"|" \
+  -e "s|^trust_height *=.*|trust_height = $SYNC_BLOCK_HEIGHT|" \
+  -e "s|^trust_hash *=.*|trust_hash = \"$SYNC_BLOCK_HASH\"|" \
+  -e "s|^persistent_peers *=.*|persistent_peers = \"$STATE_SYNC_PEER\"|" \
+  $HOME/.andromedad/config/config.toml
+  
+ #Restart node
+sudo systemctl restart andromedad && sudo journalctl -u andromedad -f
 ```
 ### _CREATE VALIDATOR / СОЗДАНИЕ ВАЛИДАТОРА_
 ```
