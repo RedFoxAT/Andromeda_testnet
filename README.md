@@ -112,7 +112,6 @@ andromedad keys show wallet --bech val -a
 ```
 curl -s localhost:26657/status | jq .result.sync_info.catching_up
 ```
-
 ### _CHECK NODE LOGS / ПРОВЕРКА ЛОГОВ_
 ```
 journalctl -u andromedad -f -o cat
@@ -121,6 +120,4 @@ journalctl -u andromedad -f -o cat
 ```
 andromedad q bank balances <wallet name>
 ```
-rm -rf .andromedad && \
-rm -rf $(which andromedad)
-```
+rm 
