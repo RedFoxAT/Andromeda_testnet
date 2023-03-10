@@ -58,7 +58,7 @@ wget -qO $HOME/.andromeda/config/genesis.json wget "https://snapshot.yeksin.net/
 ```
 ### _DOWNLOAD ADDRBOOK / ЗАГРУЗКА АДРЕСНОЙ КНИГИ_
 ```
-wget -qO $HOME/.andromedad/config/addrbook.json wget "https://snapshot.yeksin.net/andromeda/addrbook.json"
+wget -qO $HOME/.andromedad/config/addrbook.json wget "https://raw.githubusercontent.com/RedFoxAT/Andromeda_testnet/main/addrbook.json"
 ```
 ### _ADD PEERS / ДОБАВЛЕНИЕ ПИРОВ_
 ```
