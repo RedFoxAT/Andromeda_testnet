@@ -1,11 +1,9 @@
 <img src="https://github.com/RedFoxAT/Andromeda/blob/main/andromeda_logo.png" width="1150" alt="" />
-
 ### _MINIMUM REQUIREMENTS / МИНИМАЛЬНЫЕ ТРЕБОВАНИЯ_
  ```OS``` _UBUNTU 20.04<br>
  ```CPU``` 4core<br>
  ```RAM``` 16GB<br>
  ```HDD``` 200GB_<br>
-
 ### _LINKS / ССЫЛКИ_
 ```WEBSITE``` - https://andromedaprotocol.io/ <br>
 ```TWITTER``` - https://twitter.com/AndromedaProt/ <br>
@@ -121,4 +119,3 @@ journalctl -u andromedad -f -o cat
 andromedad q bank balances <wallet name>
 ``` wallet name>
 ```
-rm 
