@@ -119,8 +119,6 @@ journalctl -u andromedad -f -o cat
 ### _CHECK BALANCE / ПРОВЕРКА БАЛАНСА КОШЕЛЬКА_
 ```
 andromedad q bank balances <wallet name>
-``` 
-
-andromedad q bank balances <wallet name>
+``` wallet name>
 ```
 rm 
