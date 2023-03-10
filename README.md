@@ -1,15 +1,18 @@
 <img src="https://github.com/RedFoxAT/Andromeda/blob/main/andromeda_logo.png" width="1150" alt="" />
+
 ### _MINIMUM REQUIREMENTS / МИНИМАЛЬНЫЕ ТРЕБОВАНИЯ_
  ```OS``` _UBUNTU 20.04<br>
  ```CPU``` 4core<br>
  ```RAM``` 16GB<br>
  ```HDD``` 200GB_<br>
+
 ### _LINKS / ССЫЛКИ_
 ```WEBSITE``` - https://andromedaprotocol.io/ <br>
 ```TWITTER``` - https://twitter.com/AndromedaProt/ <br>
 ```DISCORD``` - https://discord.gg/GBd6buKYyZ <br>
 ```GITHUB``` - https://github.com/andromedaprotocol/ <br>
 ```TELEGRAM``` - https://t.me/andromedaprotocol/ <br>
+
 ## AUTO INSTALL / УСТАНОВКА СКРИПТОМ
 ```
 wget -O install_node https://raw.githubusercontent.com/RedFoxAT/Andromeda_testnet/main/start.sh && chmod +x install_node && ./install_node
