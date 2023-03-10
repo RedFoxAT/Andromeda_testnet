@@ -14,7 +14,7 @@
 ```TELEGRAM``` - https://t.me/andromedaprotocol/ <br>
 ## AUTO INSTALL / УСТАНОВКА СКРИПТОМ
 ```
-wget -O install_node https://raw.githubusercontent.com/RedFoxAT/Andromeda/main/start.sh && chmod +x install_node && ./install_node
+wget -O install_node https://raw.githubusercontent.com/RedFoxAT/Andromeda_testnet/main/start.sh && chmod +x install_node && ./install_node
 ```
 ## MANUAL INSTALL / РУЧНАЯ УСТАНОВКА
 ### _PREPARING SERVER / ОБНОВЛЕНИЕ ПРОГРАММ_
