@@ -123,9 +123,9 @@ andromedad q bank balances <wallet name>
 ```
 ### _BACKUP VALIDATOR NODE FILE / РЕЗЕРВНОЕ КОПИРОВАНИЕ КЛЮЧЕЙ НОДЫ_
 ```
-cp .andromedad/config/node_key.json /home/node
-cp .andromedad/config/priv_validator_key.json /home/node
-cp .andromedad/data/priv_validator_state.json /home/node
+cp .andromedad/config/node_key.json /home/nodebackup
+cp .andromedad/config/priv_validator_key.json /home/nodebackup
+cp .andromedad/data/priv_validator_state.json /home/nodebackup
 ```
 ### _CHANGE NODE PROPERTIES / ИЗМЕНЕНИЕ СВОЙСТВ НОДЫ_
 ```
