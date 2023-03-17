@@ -66,6 +66,7 @@ PEERS="06d4ab2369406136c00a839efc30ea5df9acaf11@10.128.0.44:26656,43d667323445c8
 sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.andromedad/config/config.toml
 ```
 ### _SYNK NODE / СИНХРОНИЗАЦИЯ НОДЫ_
+After execution, the node should be synchronized in about 3-5 minutes
 ```
 sudo systemctl stop andromedad
 andromedad tendermint unsafe-reset-all --home $HOME/.andromedad --keep-addr-book 
