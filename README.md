@@ -54,7 +54,7 @@ andromedad keys add <walletname> --recover
 ```
 ### _DOWNLOAD GENESIS / ЗАГРУЗКА GENESIS_
 ```
-wget -qO $HOME/.andromeda/config/genesis.json wget "https://snapshot.yeksin.net/andromeda/genesis.json"
+curl -Ls https://raw.githubusercontent.com/andromedaprotocol/testnets/galileo-3/genesis.json > $HOME/.andromedad/config/genesis.json
 ```
 ### _DOWNLOAD ADDRBOOK / ЗАГРУЗКА АДРЕСНОЙ КНИГИ_
 ```
