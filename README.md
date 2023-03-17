@@ -88,6 +88,10 @@ sed -i \
  #Restart node
 sudo systemctl restart andromedad && sudo journalctl -u andromedad -f
 ```
+### _CHECK NODE SYNK / ПРОВЕРКА СИНХРОНИЗАЦИИ_ (if results _FALSE_ – node is synchronized)(если результат _FALSE_ - нода синхронизирована)
+```
+curl -s localhost:26657/status | jq .result.sync_info.catching_up
+```
 ### _CREATE VALIDATOR / СОЗДАНИЕ ВАЛИДАТОРА_
 #### ATTENTION! Perform only after synchronization of nodes
 ```
@@ -110,11 +114,7 @@ andromedad tx staking create-validator \
 ```
 andromedad keys show wallet --bech val -a
 ```
-## 
-### _CHECK NODE SYNK / ПРОВЕРКА СИНХРОНИЗАЦИИ_ (if results _FALSE_ – node is synchronized)(если результат _FALSE_ - нода синхронизирована)
-```
-curl -s localhost:26657/status | jq .result.sync_info.catching_up
-```
+
 ### _CHECK NODE LOGS / ПРОВЕРКА ЛОГОВ_
 ```
 journalctl -u andromedad -f -o cat
