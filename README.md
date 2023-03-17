@@ -73,7 +73,7 @@ andromedad tendermint unsafe-reset-all --home $HOME/.andromedad --keep-addr-book
 STATE_SYNC_RPC="http://161.97.148.146:60657"
 
 LATEST_HEIGHT=$(curl -s $STATE_SYNC_RPC/block | jq -r .result.block.header.height)
-SYNC_BLOCK_HEIGHT=$(($LATEST_HEIGHT - 2000))
+SYNC_BLOCK_HEIGHT=$(($LATEST_HEIGHT - 1000))
 SYNC_BLOCK_HASH=$(curl -s "$STATE_SYNC_RPC/block?height=$SYNC_BLOCK_HEIGHT" | jq -r .result.block_id.hash)
 
 sed -i \
