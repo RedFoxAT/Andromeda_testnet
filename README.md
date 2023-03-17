@@ -89,6 +89,7 @@ sed -i \
 sudo systemctl restart andromedad && sudo journalctl -u andromedad -f
 ```
 ### _CREATE VALIDATOR / СОЗДАНИЕ ВАЛИДАТОРА_
+#### ATTENTION! Perform only after synchronization of nodes
 ```
 andromedad tx staking create-validator \
 --commission-rate 0.1 \
