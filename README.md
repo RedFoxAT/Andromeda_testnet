@@ -24,6 +24,10 @@ wget -O install_node https://raw.githubusercontent.com/RedFoxAT/Andromeda_testne
 sudo apt update && sudo apt upgrade -y
 sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bsdmainutils git make ncdu gcc git jq chrony liblz4-tool -y
 ```
+I recommend setting up a firewall
+```
+https://github.com/RedFoxAT/UFW-Uncomplicated-Firewall-
+```
 ### _INSTALL GO / УСТАНОВКА GO_
 ```
 ver="1.20.1" && \
